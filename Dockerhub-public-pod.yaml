@@ -6,9 +6,11 @@ metadata:
     app: my-app
 spec:
   restartPolicy: Always
+  imagePullSecrets:
+    - name: naga
   containers:
     - name: httpd-container
-      image: ubuntu
-      imagePullPolicy: Never
+      image: nagarajusatyala/private-repo:v2
+      imagePullPolicy: Always
       ports:
         - containerPort: 8800
