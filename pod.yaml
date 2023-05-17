@@ -9,6 +9,6 @@ spec:
   containers:
     - name: httpd-container
       image: ubuntu
-      imagePullPolicy: Never
+      imagePullPolicy: Always
       ports:
-        - containerPort: 8800
+        - containerPort: 8080
